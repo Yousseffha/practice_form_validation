@@ -1,0 +1,103 @@
+/* start global rules */
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  background-color: #ddd;
+  width: 45vw;
+  height: 65vh;
+  border-radius: 5px;
+  padding: 25px 35px;
+}
+/* end global rules */
+/* start form */
+form div {
+  display: flex;
+  flex-direction: column;
+}
+form div label {
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+form div input {
+  margin-bottom: 10px;
+  height: 4vh;
+  border-color: #9e9d9d;
+  border: solid 1px #ddd;
+  outline: none;
+  padding: 0 0 0 10px;
+  transition: 0.3s;
+}
+form div input:focus {
+  border: 1px solid #4cb050;
+}
+form button {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #4cb050;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 0;
+}
+form button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 0;
+  height: 100%;
+  background-color: #bff5c167;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+form button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: #bff5c167;
+  z-index: -1;
+  transition: 0.3s;
+}
+form button:hover::before,
+form button:hover::after {
+  width: 50%;
+}
+/* end form */
+/* start box */
+.box {
+  color: red;
+  margin-top: 5vh;
+}
+.box p {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+.box p span {
+  margin-right: 5px;
+  transform: translateY(50%);
+  font-size: 19px;
+}
+.green {
+  color: #4cb050;
+}
+/* end box */
+/* mobile */
+@media (max-width: 786px) {
+  .container {
+    width: 800%;
+  }
+}
